@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  <script>
+function validateForm() {
+    var x = document.forms["myForm"]["firstnamesignup"].value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+
 </head>
 <body>
 <div id="container_demo" >
@@ -25,7 +36,7 @@
    
   </div>
   <div id="register" class="animate form" align="center">
-	<form  action="" autocomplete="on"  > 
+	<form name="myForm" action="" autocomplete="on"  onsubmit="return validateForm()" method="post"> 
 				
 
 <p> 
