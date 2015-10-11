@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 	<head>
 		<title>Edit Your Profile</title>
 	    <meta charset="utf-8">
 	    <meta content="width=device-width, initial-scale=1" name="viewport">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	    <link href="public/css/template.css" rel="stylesheet">
 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	    <script src="public/js/validate.js"></script>
 	</head>
 
@@ -29,8 +29,8 @@
     			</div>
     			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       				<ul class="nav navbar-nav">
-        				<li><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        				<li class="active"><a href="editProfile.html">Edit Profile</a></li>
+        				<li><a href="#">Home</a></li>
+        				<li class="active"><a href="editProfile.html">Edit Profile <span class="sr-only">(current)</span></a></li>
         			</ul>
         			<ul class="nav navbar-nav navbar-right">
         				<li><a href="login.html"><u>Logout</u></a></li>
@@ -42,35 +42,74 @@
         	<div class="container-fluid">
 	        	<div class="jumbotron">
 	        		<div class="row">
-	        			<form class="form-horizontal col-md-4 col-md-offset-4" action="" autocomplete="on" role="form" >
-							<div class="form-group form-group-">
-								<label class="control-label" for="firstnamesignup">First Name:</label>
-								<input class="form-control" id="firstnamesignup" name="firstname" required="required" type="text"  />
+		        		<div class="col-md-6">
+		        			<div class="row">
+			        			<div class="col-md-6">
+				        			<form action="" enctype="multipart/form-data" autocomplete="on" role="form">
+				        				<div class="form-group form-group-">
+				        					<label class="control-label" for="imageprofile">Profile Picture:</label>
+				        					<a href="#" class="thumbnail">
+										      <img class="img-responsive" src="public/img/icon.png" alt="">
+										    </a>
+											<input class="form-control" id="imageprofile" name="image" type="file" accept="image/*" />
+											<div class="col-md-5">
+												<input class="form-control" type="submit" name="profilePic" value="Save"/>
+											</div>
+				        				</div>
+				        			</form>
+				        		</div>
+				        	</div>
+				        	<div class="row" id="aboutMe">
+				        		<div class="col-md-6">
+				        			<form action="" autocomplete="on" role="form">
+						        		<div class="form-group">
+						        			<label class="control-label" for="aboutMeprofile">About Me:</label>
+						        			<textarea class="form-control" rows="7" id="aboutMeprofile" name="aboutMe"></textarea>
+						        		</div>
+		        					</form>
+				        		</div>
+		        			</div>
+		        		</div>	
+		        		<div class="col-md-4 col-md-offset-1">
+		        			<form class="form-horizontal" action="" autocomplete="on" role="form" >
+								<div class="form-group form-group-sm">
+									<label class="control-label" for="firstnameprofile">First Name:</label>
+									<input class="form-control" id="firstnameprofile" name="firstname" required="required" type="text"  />
 
-								<label class="control-label" for="lastnamesignup">Last Name:</label>
-								<input class="form-control" id="lastnamesignup" name="lastname" required="required" type="text"  />
-						
-								<label class="control-label" for="usernamesignup">Username:</label>
-								<input class="form-control" id="usernamesignup" name="username" required="required" type="text"  />
+									<label class="control-label" for="lastnameprofile">Last Name:</label>
+									<input class="form-control" id="lastnameprofile" name="lastname" required="required" type="text"  />
+							
+									<label class="control-label" for="usernameprofile">Username:</label>
+									<input class="form-control" id="usernameprofile" name="username" required="required" type="text"  />
 
-								<label class="control-label" for="passwordsignup">Password:</label>
-								<input class="form-control" id="passwordsignup" name="password" required="required" type="password" />
+									<label class="control-label" for="streetaddressprofile">Street Address:</label>
+									<input class="form-control" id="streetaddressprofile" name="address" required="required" type="text" />
 
-								<label class="control-label" for="passwordsignup_confirm">Re-Enter Password:  </label>
-								<input class="form-control" id="passwordsignup_confirm" name="password_confirm" required="required" type="password" />
+									<label class="control-label" for="cityprofile">City:</label>
+									<input class="form-control" id="cityprofile" name="city" required="required" type="text" />
 
-								<label class="control-label" for="emailsignup"> E-mail Address:</label>
-								<input class="form-control" id="emailsignup" name="email" required="required" type="email" /> 
-							</div>
-							<input class="form-control" type="submit" onClick="location.href='registrationSuccessful.html'" value="Sign up"/>
-								<p class="text-center">Already a member ?<a href="login.html" > Go and log in</a></p>
-							<input type="hidden" name="honeypot" value="IS-421-RRZ" />
-						</form>
+									<label class="control-label" for="stateprofile">State:</label>
+									<input class="form-control" id="stateprofile" name="state" required="required" type="text" />
+
+									<label class="control-label" for="countryprofile">Country:</label>
+									<input class="form-control" id="countryprofile" name="country" required="required" type="text" />
+
+									<label class="control-label" for="bdayprofile">Date Of Birth:</label>
+									<input class="form-control" id="bdayprofile" name="bday" required="required" type="date" />
+
+									<label class="control-label" for="phoneprofile">Phone Number:</label>
+									<input class="form-control" id="phoneprofile" name="country" required="required" type="tel" />
+
+									<label class="control-label" for="emailprofile"> E-mail Address:</label>
+									<input class="form-control" id="emailprofile" name="email" required="required" type="email" /> 
+								</div>
+								<input class="form-control" type="submit" name="updateProfile" value="Save"/>
+									
+								<input type="hidden" name="honeypot" value="IS-421-RRZ" />
+							</form>
+						</div>
 					</div>
 	        	</div>
-	        </div>
-        	<div class="container-fluid">
-	        	
 	        </div>
         </section>
 		

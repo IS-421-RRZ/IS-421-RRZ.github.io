@@ -1,78 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Home Page</title>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/css/template.css" rel="stylesheet">
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="public/js/validate.js"></script>
-</head>
 
-<body>
-	<div class="container">
-  <div class="jumbotron">
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">User</a>
-		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-<p align="right">
-    <input type="username" class="login-input" placeholder="Username"  >
-</p>
-<p align="right">
-    <input type="password" class="password-input" placeholder="Password"  >
-</p>
-<p align="right">
-	
-	<a href="login.html" > Log In </a>&nbsp;
-       
-       <a href="Register.html" > Sign Up </a>
+	<head>
+		<title>User Home</title>
+	    <meta charset="utf-8">
+	    <meta content="width=device-width, initial-scale=1" name="viewport">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="public/css/template.css" rel="stylesheet">
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
 
-
-	
-   
-</p>
-
-  </form>
-<div align="center">
-<center>
-<table border="0" cellpadding="2" cellspacing="0" width="714" height="94">
-<tr>
-<td width="706" valign="middle" align="center" height="88"><font face="Impact" size="7" color="#000000">UMS</font></td>
-</tr>
-</table>
-</center>
-</div>
-</td>
-<td width="557" height="1042" bgcolor="#FFFFFF" valign="top" rowspan="4">
-<p align="center"><b><font face="Arial" color="#000000" size="6">User Management System</font></b></p>
-</center>
-
-</table>
-</div>
-</td>
-</tr>
-</table>
-</div>
-
-
-</body>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+    			<!-- Brand and toggle get grouped for better mobile display -->
+    			<div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      					<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			<a class="navbar-brand " href="#">
+        				<img id="brand-image" class="img-circle" src="public/img/icon.png"/>
+        			</a>
+    			</div>
+    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      				<ul class="nav navbar-nav">
+        				<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        				<li><a href="editProfile.html">Edit Profile</a></li>
+        			</ul>
+        			<ul class="nav navbar-nav navbar-right">
+        				<li><a href="login.html"><u>Logout</u></a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </nav>
+        <section>
+        	<div class="container-fluid">
+	        	<div class="jumbotron">
+	        		<h1>User Management System</h1>
+	        	</div>
+	        </div>
+	        <div class="container-fluid">
+	        	<div class="row">
+	        		<div class="col-md-9 col-md-offset-1 panel panel-default">
+  						<div class="panel-body" style="height: 250px">
+    						<h2>Body</h2>
+  						</div>
+					</div>
+	        	</div>
+	        </div>
+        </section>
+		
+	</body>
 
 </html>
