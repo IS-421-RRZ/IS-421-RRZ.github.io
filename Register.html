@@ -1,116 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Register</title>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<head>
+		<title>Register</title>
+	    <meta charset="utf-8">
+	    <meta content="width=device-width, initial-scale=1" name="viewport">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="public/css/template.css" rel="stylesheet">
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	    <script src="public/js/validate.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+    			<!-- Brand and toggle get grouped for better mobile display -->
+    			<div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      					<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			<a class="navbar-brand " href="#">
+        				Company Name
+        			</a>
+    			</div>
+    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      				<ul class="nav navbar-nav">
+        				<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        			</ul>
+        			<ul class="nav navbar-nav navbar-right">
+        				<li><a href="login.html"><u>Login</u></a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </nav>
+		<div class="container">
+			<div class="jumbotron">
+	    		<h1 align="center"> User Registration </h1>
+	  		</div>
+	  	</div>
+	  	<div class="container-fluid">
+			<div class="row">
+				<form class="form-horizontal col-md-4 col-md-offset-4" action="registrationSuccessful.html" autocomplete="on" role="form" onsubmit="return checkForm(this);" >
+					<div class="form-group form-group-">
+						<label class="control-label" for="firstnamesignup">First Name:</label>
+						<input class="form-control" id="firstnamesignup" name="firstname" required="required" type="text"  />
 
-    <script type="text/javascript">
+						<label class="control-label" for="lastnamesignup">Last Name:</label>
+						<input class="form-control" id="lastnamesignup" name="lastname" required="required" type="text"  />
+				
+						<label class="control-label" for="usernamesignup">Username:</label>
+						<input class="form-control" id="usernamesignup" name="username" required="required" type="text"  />
 
-        function checkForm(form) {
+						<label class="control-label" for="passwordsignup">Password:</label>
+						<input class="form-control" id="passwordsignup" name="password" required="required" type="password" />
 
-            // checks to make sure no fields are empty
-            if (form.firstname.value == "" || form.lastname.value == "" || form.username.value == "" || form.passwordfield.value == ""
-                || form.passwordcheck.value == "" || form.emailfield.value == "" || form.emailcheck.value == "") {
-                alert("Error: One of the fields is empty! Do not leave any fields empty!");
-                return false;
-            }
+						<label class="control-label" for="passwordsignup_confirm">Re-Enter Password:  </label>
+						<input class="form-control" id="passwordsignup_confirm" name="password_confirm" required="required" type="password" />
 
-            // checks to make sure passwords match
-            if (form.passwordfield.value != form.passwordcheck.value) {
-                alert("Error: passwords do not match!");
-                form.passwordfield.focus();
-                return false;
-            }
-
-            // checks to make sure emails match
-            if (form.emailfield.value != form.emailcheck.value) {
-                alert("Error: Emails do not match!");
-                form.emailfield.focus();
-                return false;
-            }
-
-            // regular expressions needed
-            var name = /^[A-z]+$/;
-            var pass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-            var email = /^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/;
-
-            // validate firstname, lastname, and username
-            if (!name.test(form.firstname.value) || !name.test(form.lastname.value) || !name.test(form.username.value)) {
-                alert("Error: Firstname, lastname, username contains invalid characters!");
-                return false;
-            }
-
-            // validate password
-            if (!pass.test(form.passwordfield.value)) {
-                alert("Error: Password not strong enough");
-                return false;
-            }
-
-            // validate email
-            if (!email.test(form.emailfield.value)) {
-                alert("Error: mail not valid");
-                return false;
-            }
-
-            // all tests passed, submit form
-            return alert('successful submit');
-        }
-
-    </script>
-</head>
-<body>
-    <div id="container_demo">
-        <a class="hiddenanchor" id="toregister"></a>
-        <div id="wrapper"></div>
-        <div class="container">
-            <div class="jumbotron">
-                <h1 style="text-align: center">User Registration</h1>
-            </div>
-            <div class="animate form" id="register" style="text-align: center">
-                <form action="" autocomplete="on" onsubmit="return checkForm(this);">
-                    <p>
-                        <label class="fname" data-icon="u" for="firstnamesignup">First Name:</label><br>
-                        <input id="firstnamesignup" name="firstname" type="text">
-                    </p>
-                    <p>
-                        <label class="lname" data-icon="u" for="lastnamesignup">Last Name:</label><br>
-                        <input id="lastnamesignup" name="lastname" type="text">
-                    </p>
-                    <p>
-                        <label class="uname" data-icon="u" for="usernamesignup">Username:</label><br>
-                        <input id="usernamesignup" name="username" type="text">
-                    </p>
-                    <p>
-                        <label class="youpasswd" data-icon="p" for="passwordsignup">Password:</label><br>
-                        <input id="passwordsignup" name="passwordfield" type="password">
-                    </p>
-                    <p>
-                        <label class="youpasswd" data-icon="p" for="passwordsignup_confirm">Re-Enter Password:</label><br>
-                        <input id="passwordsignup_confirm" name="passwordcheck"
-                               type="password">
-                    </p>
-                    <p>
-                        <label class="youmail" data-icon="e" for="emailsignup">E-mail ID:</label><br>
-                        <input id="emailsignup" name="emailfield">
-                    </p>
-                    <p>
-                        <label class="youemail" data-icon="p" for="emailsignup_confirm">Re-Enter E-mail ID:</label><br>
-                        <input id="emailsignup_confirm" name="emailcheck">
-                    </p>
-                    <p class="signin button">
-                        <input type="submit" value="Sign up">
-                    </p>
-                    <p class="change_link">
-                        Already a member ? <a href="login.html">Go and log in!</a>
-                    </p>
-                </form>
-            </div>
-        </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
+						<label class="control-label" for="emailsignup"> E-mail Address:</label>
+						<input class="form-control" id="emailsignup" name="email" required="required" type="email" /> 
+					</div>
+					<input class="form-control" type="submit" value="Sign up"/>
+						<p class="text-center">Already a member ?<a href="login.html" > Go and log in</a></p>
+					<input type="hidden" name="honeypot" value="IS-421-RRZ" />
+				</form>
+			</div>
+		</div>
+	</body>
 </html>
+
+
 

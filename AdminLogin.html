@@ -2,10 +2,13 @@
 <html>
 
 	<head>
-		<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="public/css/template.css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script type="text/javascript" src="public/js/bootstrap.js"></script>
+		<title>Admin</title>
+	    <meta charset="utf-8">
+	    <meta content="width=device-width, initial-scale=1" name="viewport">
+	    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="public/css/template.css" rel="stylesheet">
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -19,84 +22,104 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>
         			</button>
-        			<a class="navbar-brand" href="#">Admin</a>
+        			<a class="navbar-brand " href="#">
+        				<img id="brand-image" class="img-circle" src="public/img/icon.png"/>
+        			</a>
     			</div>
     			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       				<ul class="nav navbar-nav">
         				<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        				<li><a href="login.html">Logout</a></li>
+        				<li><a href="EditProfile.html">Edit Profile</a></li>
+        			</ul>
+        			<ul class="nav navbar-nav navbar-right">
+        				<li><a href="login.html"><u>Logout</u></a></li>
         			</ul>
         		</div>
         	</div>
         </nav>
         <section>
-        	<div class="jumbotron">
-        		<h1>Welcome Admin</h1>
-        	</div>
-        	<div class="panel panel-default table-responsive">
-        		<div class="panel-heading">
-    				<h3 class="panel-title">Database Rows</h3>
-  				</div>
-        		<div class="panel-body">
-        			<form method="POST" id="tableForm"></form>
-	        		<table class="table table-striped table-bordered table-hover table-condensed">
-	        			<thead>
-	        				<th>Select</th>
-	        				<th>First Name</th>
-	        				<th>Last Name</th>
-	        				<th>UserName</th>
-	        				<th>Password</th>
-	        				<th>Email</th>
-	        				<th>Role</th>
-	        			</thead>
-	        			<tr>
-	        				<td><input form="tableForm" type="checkbox"></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td>
-	        					<select>
-	        						<option value="user">User</option>
-  									<option value="admin">Admin</option>
-  								</select>
-	        				</td>
-	        			</tr>
-	        			<tr>
-	        				<td><input form="tableForm" type="checkbox"></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td>
-	        					<select>
-	        						<option value="user">User</option>
-  									<option value="admin">Admin</option>
-  								</select>
-	        				</td>
-	        			</tr>
-	        			<tr>
-	        				<td><input form="tableForm" type="checkbox"></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td></td>
-	        				<td>
-	        					<select>
-	        						<option value="user">User</option>
-  									<option value="admin">Admin</option>
-  								</select>
-	        				</td>
-	        			</tr>
-	        		</table>
-	        		<input type="submit" value="save">
-	        		<input type="submit" value="delete">
+        	<div class="container-fluid">
+	        	<div class="jumbotron">
+	        		<h1>Welcome Admin</h1>
 	        	</div>
-        	</div>
-        	
+	        </div>
+        	<div class="container-fluid">
+	        	<div class="panel panel-default table-responsive">
+	        		<div class="panel-heading">
+	    				<h3 class="panel-title">Database Rows</h3>
+	  				</div>
+	        		<div class="panel-body">
+	        			<form method="POST" id="tableForm" role="form"></form>
+		        		<table class="table table-striped table-bordered table-hover table-condensed">
+		        			<thead>
+		        				<th>Select</th>
+		        				<th>First Name</th>
+		        				<th>Last Name</th>
+		        				<th>UserName</th>
+		        				<th>Password</th>
+		        				<th>Email</th>
+		        				<th>Role</th>
+		        			</thead>
+		        			<tr>
+		        				<td>
+	        						<input class="form-control" form="tableForm" type="checkbox">
+		        				</td>
+		        				<td></td>
+		        				<td></td>
+		        				<td></td>
+		        				<td></td>
+		        				<td></td>
+		        				<td>
+			        				<select class="form-control">
+			        					<option value="user">User</option>
+		  								<option value="admin">Admin</option>
+		  							</select>	
+		        				</td>
+		        			</tr>
+		        			<tr>
+		        				<td>
+		        					<input class="form-control" form="tableForm" type="checkbox">
+		        				</td>
+		        				<td></td>
+		        				<td></td>
+		        				<td></td>
+		        				<td></td>
+		        				<td></td>
+		        				<td>
+			        				<select class="form-control">
+			        					<option value="user">User</option>
+		  								<option value="admin">Admin</option>
+		  							</select>
+		        				</td>
+		        			</tr>
+		        			<tr>
+		        				<td>
+		        					<input class="form-control" form="tableForm" type="checkbox">
+		        				</td>
+		        				<td></td>
+		        				<td></td>
+		        				<td></td>
+		        				<td></td>
+		        				<td></td>
+		        				<td>
+			        				<select class="form-control">
+			        					<option value="user">User</option>
+		  								<option value="admin">Admin</option>
+		  							</select>
+		        				</td>
+		        			</tr>
+		        		</table>
+		        		<div class="row">
+		        			<div class="col-md-1 col-md-offset-10">
+			        			<input class="form-control" type="submit" value="save">
+			        		</div>
+			        		<div class="col-md-1">
+			        			<input class="form-control" type="submit" value="delete">
+			        		</div>
+			        	</div>
+		        	</div>
+	        	</div>
+	        </div>
         </section>
 		
 	</body>
