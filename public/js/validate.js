@@ -1,23 +1,23 @@
 function checkForm(form) {
 
     // checks to make sure no fields are empty
-    if (form.firstname.value == "" || form.lastname.value == "" || form.username.value == "" || form.passwordfield.value == ""
-        || form.passwordcheck.value == "" || form.emailfield.value == "" || form.emailcheck.value == "") {
+    if (form.firstname.value == "" || form.lastname.value == "" || form.username.value == "" || form.password.value == ""
+        || form.password_confirm.value == "" || form.email.value == "" || form.emailcheck.value == "") {
         alert("Error: One of the fields is empty! Do not leave any fields empty!");
         return false;
     }
 
     // checks to make sure passwords match
-    if (form.passwordfield.value != form.passwordcheck.value) {
+    if (form.password.value != form.password_confirm.value) {
         alert("Error: passwords do not match!");
-        form.passwordfield.focus();
+        form.password.focus();
         return false;
     }
 
     // checks to make sure emails match
-    if (form.emailfield.value != form.emailcheck.value) {
+    if (form.email.value != form.emailcheck.value) {
         alert("Error: Emails do not match!");
-        form.emailfield.focus();
+        form.email.focus();
         return false;
     }
 
@@ -33,13 +33,13 @@ function checkForm(form) {
     }
 
     // validate password
-    if (!pass.test(form.passwordfield.value)) {
+    if (!pass.test(form.password.value)) {
         alert("Error: Password not strong enough");
         return false;
     }
 
     // validate email
-    if (!email.test(form.emailfield.value)) {
+    if (!email.test(form.email.value)) {
         alert("Error: mail not valid");
         return false;
     }
