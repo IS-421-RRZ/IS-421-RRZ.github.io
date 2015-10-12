@@ -1,10 +1,5 @@
 function checkForm(form) {
 
-
-//roberti
- var goodColor = "#66cc66";
- var badColor = "#ff6666";
-
     // checks to make sure no fields are empty
     if (form.firstname.value == "" || form.lastname.value == "" || form.username.value == "" || form.password.value == ""
         || form.passwordconfirm.value == "" || form.email.value == "" || form.emailcheck.value == "") {
@@ -13,22 +8,12 @@ function checkForm(form) {
     }
 
     // checks to make sure passwords match
-    
- if(password.value == passwordconfirm.value){
-        //The passwords match. 
-        //Set the color to the good color and inform
-        //the user that they have entered the correct password 
-        passwordconfirm.style.backgroundColor = goodColor;
-        message.style.color = goodColor;
-        message.innerHTML = "Passwords Match!"
-    }else{
-        //The passwords do not match.
-        //Set the color to the bad color and
-        //notify the user.
-        passwordconfirm.style.backgroundColor = badColor;
-        message.style.color = badColor;
-        message.innerHTML = "Passwords Do Not Match!"
+    if (form.password.value != form.passwordconfirm.value) {
+        alert("Error: passwords do not match!");
+        form.password.focus();
+        return false;
     }
+ 
     // checks to make sure emails match
     if (form.email.value != form.emailcheck.value) {
         alert("Error: Emails do not match!");
