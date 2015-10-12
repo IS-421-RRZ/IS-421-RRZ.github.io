@@ -42,30 +42,43 @@
 	  	</div>
 	  	<div class="container-fluid">
 			<div class="row">
-				<form class="form-horizontal col-md-4 col-md-offset-4" action="registrationSuccessful.html" autocomplete="on" role="form" onsubmit="return checkForm(this);" >
-					<div class="form-group form-group-">
-						<label class="control-label" for="firstnamesignup">First Name:</label>
-						<input class="form-control" id="firstnamesignup" name="firstname" type="text"  />
-
-						<label class="control-label" for="lastnamesignup">Last Name:</label>
-						<input class="form-control" id="lastnamesignup" name="lastname" type="text"  />
-				
-						<label class="control-label" for="usernamesignup">Username:</label>
-						<input class="form-control" id="usernamesignup" name="username" type="text"  />
-
-						<label class="control-label" for="password">Password:</label>
-						<input class="form-control" id="password" name="passwordfield" type="password" />
-
-						<label class="control-label" for="passwordconfirm">Re-Enter Password:  </label>
-						<input class="form-control" id="passwordconfirm" name="passwordcheck" type="password" />
-
-						<label class="control-label" for="emailsignup"> E-mail Address:</label>
-						<input class="form-control" id="emailsignup" name="emailfield" type="email" /> 
-					</div>
-					<input class="form-control" type="submit" value="Sign up"/>
-						<p class="text-center">Already a member ?<a href="login.html" > Go and log in</a></p>
-					<input type="hidden" name="honeypot" value="IS-421-RRZ" />
-				</form>
+				<form action="" autocomplete="on" onsubmit="return checkForm(this);">
+                    <p>
+                        <label class="fname" data-icon="u" for="firstnamesignup">First Name:</label><br>
+                        <input id="firstnamesignup" name="firstname" type="text">
+                    </p>
+                    <p>
+                        <label class="lname" data-icon="u" for="lastnamesignup">Last Name:</label><br>
+                        <input id="lastnamesignup" name="lastname" type="text">
+                    </p>
+                    <p>
+                        <label class="uname" data-icon="u" for="usernamesignup">Username:</label><br>
+                        <input id="usernamesignup" name="username" type="text">
+                    </p>
+                    <p>
+                        <label class="youpasswd" data-icon="p" for="passwordsignup">Password:</label><br>
+                        <input id="passwordsignup" name="passwordfield" type="password">
+                    </p>
+                    <p>
+                        <label class="youpasswd" data-icon="p" for="passwordsignup_confirm">Re-Enter Password:</label><br>
+                        <input id="passwordsignup_confirm" name="passwordcheck"
+                               type="password">
+                    </p>
+                    <p>
+                        <label class="youmail" data-icon="e" for="emailsignup">E-mail ID:</label><br>
+                        <input id="emailsignup" name="emailfield">
+                    </p>
+                    <p>
+                        <label class="youemail" data-icon="p" for="emailsignup_confirm">Re-Enter E-mail ID:</label><br>
+                        <input id="emailsignup_confirm" name="emailcheck">
+                    </p>
+                    <p class="signin button">
+                        <input type="submit" value="Sign up">
+                    </p>
+                    <p class="change_link">
+                        Already a member ? <a href="login.html">Go and log in!</a>
+                    </p>
+                </form>
 			</div>
 		</div>
 	</body>
