@@ -2,7 +2,7 @@
  
             // checks to make sure no fields are empty
             if (form.firstname.value == "" || form.lastname.value == "" || form.username.value == "" || form.passwordfield.value == ""
-                || form.passwordcheck.value == "" || form.emailfield.value == "" || form.emailcheck.value == "") {
+                || form.passwordcheck.value == "" || form.emailfield.value == "") {
                 alert("Error: One of the fields is empty! Do not leave any fields empty!");
                 return false;
             }
@@ -15,11 +15,7 @@
             }
  
             // checks to make sure emails match
-            if (form.emailfield.value != form.emailcheck.value) {
-                alert("Error: Emails do not match!");
-                form.emailfield.focus();
-                return false;
-            }
+         
  
             // regular expressions needed
             var name = /^[A-z]+$/;
