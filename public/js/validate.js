@@ -2,13 +2,13 @@ function checkForm(form) {
 
     // checks to make sure no fields are empty
     if (form.firstname.value == "" || form.lastname.value == "" || form.username.value == "" || form.password.value == ""
-        || form.password_confirm.value == "" || form.email.value == "" || form.emailcheck.value == "") {
+        || form.passwordconfirm.value == "" || form.email.value == "" || form.emailcheck.value == "") {
         alert("Error: One of the fields is empty! Do not leave any fields empty!");
         return false;
     }
 
     // checks to make sure passwords match
-    if (form.password.value != form.password_confirm.value) {
+    if (form.password.value != form.passwordconfirm.value) {
         alert("Error: passwords do not match!");
         form.password.focus();
         return false;
