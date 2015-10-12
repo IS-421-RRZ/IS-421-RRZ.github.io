@@ -30,7 +30,7 @@
  
             // validate password
             if (!pass.test(form.passwordfield.value)) {
-                alert("Error: Password not strong enough");
+                alert("Error: Password must contain an intiger");
                 return false;
             }
  
