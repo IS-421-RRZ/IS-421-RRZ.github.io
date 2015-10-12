@@ -23,7 +23,7 @@ function checkForm(form) {
 
     // regular expressions needed
     var name = /^[A-z]+$/;
-    var pass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    var pass = /^(?=.*[0-9A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;  
     var email = /^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/;
 
     // validate firstname, lastname, and username
