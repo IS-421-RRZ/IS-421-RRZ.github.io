@@ -14,12 +14,7 @@ function checkForm(form) {
         return false;
     }
  
-    // checks to make sure emails match
-    if (form.email.value != form.emailcheck.value) {
-        alert("Error: Emails do not match!");
-        form.email.focus();
-        return false;
-    }
+    
 
     // regular expressions needed
     var name = /^[A-z]+$/;
