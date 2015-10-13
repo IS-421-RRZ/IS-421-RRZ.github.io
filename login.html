@@ -8,7 +8,26 @@
 	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	<link href="public/css/template.css" rel="stylesheet">
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	
+	<script type="text/javascript">
+ 
+        function checkForm(form) {
+ 
+            // checks to make sure no fields are empty
+            if (form.username.value == "" || form.passwordfield.value == "") {
+                alert("Error: One of the fields is empty! Do not leave any fields empty!");
+                return false;
+            }
+ 
+			
+           if (form.username.value.length > 8){
+			alert("The field cannot contain more than 8 characters!")
+			return false;
+			}
+            // all tests passed, submit form
+            return alert('successful submit');
+        }
+ 
+    </script>
 
 </head>
 <body>
@@ -46,7 +65,7 @@
 	<a class="hiddenanchor" id="tologin"></a>
 	<div id="wrapper">
 		<div id="login" class="animate form" align="center">
-			<form   action="" autocomplete="on" role="form"> 
+			<form   action="" autocomplete="on" role="form"  onsubmit="return checkForm(this);"> 
 <br>
 <br>
 			
@@ -56,7 +75,7 @@
 				</p>
 				<p> 
 					<font color="black"> <label for="password" class="youpasswd" data-icon="p">Password </label>
-					<input id="password"  name="password" required="required" type="password"  /> <br>
+					<input id="password"  name="passwordfield" required="required" type="password"  /> <br>
 				
 				<p></p><br>	<a href=""loginSuccessful.html>Log In 
 
