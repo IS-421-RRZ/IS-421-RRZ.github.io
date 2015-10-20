@@ -1,75 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>validate test</title>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<link href="public/css/template.css" rel="stylesheet">
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
+<!doctype html> 
  
-       $('#form-signin_v1').validate();
+ 
+ <html lang="en"> 
+ <head> 
+    <meta charset="utf-8"> 
+ 
+     <title></title> 
+     <meta name="description" content=""> 
+     <meta name="author" content=""> 
+ 
+ 
+     <link rel="stylesheet" href="jquery.validation.css"> 
+ 
+ 
+     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> 
+     <script src="../jquery.validation.js"></script> 
+ 
+ 
+ </head> 
+ <body> 
+ 
+ 
+ <h1>Signup_v1 Demo</h1> 
+ 
+ 
+ <ul> 
+     <li> 
+         <a href="http://www.runningcoder.org/jqueryvalidation/documentation/">Documentation</a> 
+     </li> 
+    <li> 
+         <a href="http://www.runningcoder.org/jqueryvalidation/demo/">Demos</a> 
+     </li> 
+ </ul> 
+ 
+ 
+ <form id="form-signup_v1" 
+      name="form-signup_v1" 
+       method="POST" 
+       class="validation-form-container"> 
 
  
-    </script>
+     <div class="field"> 
+         <label for="signup_v1-username">Username</label> 
+        <div class="ui left labeled input"> 
 
-</head>
-<body>
+ 
+             <input id="signup_v1-username" 
+                  name="signup_v1[username]" 
+                    type="text" 
+                    data-validation="[L>=6, L<=18, MIXED]" 
+                   data-validation-message="$ must be between 6 and 18 characters. No special characters allowed." 
+                    data-validation-regex="/admin/i" 
+                    data-validation-regex-message="The word &quot;Admin&quot; is not allowed in the $" > 
+ 
+ 
+             <div class="ui corner label"> 
+                 <i class="asterisk icon">*</i> 
+             </div> 
+         </div>      </div> 
+    <div class="field"> 
+         <label for="signup_v1-password">Password</label> 
+         <div class="ui left labeled input"> 
+ 
+ 
+             <input id="signup_v1-password" 
+                    name="signup_v1[password]" 
+                    type="password" data-validation="[L>=6]" 
+                    data-validation-message="$ must be at least 6 characters"> 
+ 
+ 
+             <div class="ui corner label"> 
+                 <i class="asterisk icon">*</i> 
+             </div> 
+         </div> 
+     </div> 
+     <div class="field"> 
+         <label for="signup_v1-password-confirm">Confirm Password</label> 
+         <div class="ui left labeled input"> 
+ 
+ 
+             <input id="signup_v1-password-confirm" 
+                   name="signup_v1[password-confirm]" 
+                    type="password" 
+                   data-validation="[V==signup_v1[password]]" 
+                   data-validation-message="$ does not match the password"> 
+ 
+ 
+             <div class="ui corner label"> 
+                 <i class="asterisk icon">*</i> 
+             </div> 
+         </div> 
+     </div> 
+     <div class="field"> 
+         <label for="signup_v1-email">Email</label> 
+        <div class="ui left labeled input"> 
+ 
+ 
+             <input id="signup_v1-email" 
+                    name="signup_v1[email]" 
+                   type="text" 
+                   data-validation="[EMAIL]"> 
 
-<nav class="navbar navbar-default">
-			<div class="container-fluid">
-    			<!-- Brand and toggle get grouped for better mobile display -->
-    			<div class="navbar-header">
-      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-      					<span class="sr-only">Toggle navigation</span>
-        				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span>
-        			</button>
-        			<a class="navbar-brand " href="#">
-        				Company Name
-        			</a>
-    			</div>
-    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      				<ul class="nav navbar-nav">
-        				<li class="active"><a href="login.html">Home<span class="sr-only">(current)</span></a></li>
-        			</ul>
-        			<ul class="nav navbar-nav navbar-right">
-        				<li><a href="register.html"><u>Sign Up</u></a></li>
-        			</ul>
-        		</div>
-        	</div>
-        </nav>
-		<div class="container">
-			<div class="jumbotron">
-	    		<h1 align="center"> User Log In </h1>
-	  		</div>
-	  	</div>
+ 
+            <div class="ui corner label"> 
+                <i class="asterisk icon">*</i> 
+            </div> 
+         </div> 
+    </div> 
+    <div class="field"> 
+        <label for="signup_v1-email-confirm">Confirm Email</label> 
+        <div class="ui left labeled input"> 
 
-	<a class="hiddenanchor" id="tologin"></a>
-	<div id="wrapper">
-		<div id="login" class="form-signin_v1" align="center">
-		
-		
-		<form name="form-signin_v1" id="form-signin_v1" method="POST">
-    <label>
-        Username
-        <input name="signin_v1[username]" type="text" data-validation="[NOTEMPTY]">
-    </label>
-    <label>
-        Password
-        <input name="signin_v1[password]" type="password" data-validation="[NOTEMPTY]">
-    </label>
-    <input class="ui blue submit button" type="submit" value="Login">
-</form>
-
-
-			</div>
-</div>	
-	</div>
-		
+ 
+             <input id="signup_v1-email-confirm" 
+                    name="signup_v1[email-confirm]" 
+                    type="text" 
+                    data-validation="[V==signup_v1[email]]" 
+                    data-validation-message="$ does not match the email"> 
+ 
+ 
+            <div class="ui corner label"> 
+                 <i class="asterisk icon">*</i> 
+             </div> 
+         </div> 
+     </div> 
+ 
+ 
+     <input type="submit" class="ui blue submit button" value="Sign up!"> 
+ 
+ 
+     <button id="prefill-signup_v1" type="button" class="ui mini basic button"> 
+         Prefill 
+     </button> 
+ 
+ 
+ </form> 
+ <script> 
+  
+     $('#form-signup_v1').validate({ 
+        submit: { 
+             settings: { 
+                inputContainer: '.field' 
+            }, 
+            callback: { 
+                onBeforeSubmit: function (node) { 
+ 
+                     myBeforeSubmitFunction(':D', ':)', node); 
+ 
+                 }, 
+                onSubmit: function (node) { 
+ 
+                     console.log('#' + node.id + ' has a submit override.'); 
+  
+                     //node.submit(); 
+  
+                 } 
+             } 
+         }, 
+         debug: true 
+    }); 
+</script> 
 </body>
-
-</html>
+ </html>
