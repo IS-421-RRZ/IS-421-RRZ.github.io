@@ -12,7 +12,54 @@
 
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/additional-methods.js"></script>
-    
+    <script>
+
+    $('#form-signup_v1').validate({
+        submit: {
+            settings: {
+                inputContainer: '.field'
+            },
+            callback: {
+                onBeforeSubmit: function (node) {
+
+                    myBeforeSubmitFunction(':D', ':)', node);
+
+                },
+                onSubmit: function (node) {
+
+                    console.log('#' + node.id + ' has a submit override.');
+
+                    //node.submit();
+
+                }
+            }
+        },
+        debug: true
+    });
+
+    function myBeforeSubmitFunction(a, b, node) {
+
+        console.log(a, b);
+
+        $(node).find('input:not([type="submit"]), select, textarea').attr('readonly', 'true');
+        $(node).append('<div class="ui active loader"></div>');
+
+    }
+
+    $('#prefill-signup_v1').on('click', function () {
+
+        var form = $(this).closest('form');
+
+        form.find('#signup_v1-name').val('John Doe');
+        form.find('#signup_v1-username').val('RocketJoe');
+        form.find('#signup_v1-password').val('test123');
+        form.find('#signup_v1-password-confirm').val('test123');
+        form.find('#signup_v1-email').val('test@test.test');
+        form.find('#signup_v1-email-confirm').val('test@test.test');
+
+    });
+
+</script>
 
 </head>
 <body>
@@ -110,54 +157,7 @@
 
 </form>
 
-<script>
 
-    $('#form-signup_v1').validate({
-        submit: {
-            settings: {
-                inputContainer: '.field'
-            },
-            callback: {
-                onBeforeSubmit: function (node) {
-
-                    myBeforeSubmitFunction(':D', ':)', node);
-
-                },
-                onSubmit: function (node) {
-
-                    console.log('#' + node.id + ' has a submit override.');
-
-                    //node.submit();
-
-                }
-            }
-        },
-        debug: true
-    });
-
-    function myBeforeSubmitFunction(a, b, node) {
-
-        console.log(a, b);
-
-        $(node).find('input:not([type="submit"]), select, textarea').attr('readonly', 'true');
-        $(node).append('<div class="ui active loader"></div>');
-
-    }
-
-    $('#prefill-signup_v1').on('click', function () {
-
-        var form = $(this).closest('form');
-
-        form.find('#signup_v1-name').val('John Doe');
-        form.find('#signup_v1-username').val('RocketJoe');
-        form.find('#signup_v1-password').val('test123');
-        form.find('#signup_v1-password-confirm').val('test123');
-        form.find('#signup_v1-email').val('test@test.test');
-        form.find('#signup_v1-email-confirm').val('test@test.test');
-
-    });
-
-</script>
 
 </body>
 </html>
