@@ -159,6 +159,29 @@
          }, 
          debug: true 
     }); 
+    
+    function myBeforeSubmitFunction(a, b, node) { 
+ 
+        console.log(a, b); 
+  
+         $(node).find('input:not([type="submit"]), select, textarea').attr('readonly', 'true'); 
+         $(node).append('<div class="ui active loader"></div>'); 
+  
+     } 
+  
+     $('#prefill-signup_v1').on('click', function () { 
+ 
+         var form = $(this).closest('form'); 
+ 
+         form.find('#signup_v1-name').val('John Doe'); 
+         form.find('#signup_v1-username').val('RocketJoe'); 
+         form.find('#signup_v1-password').val('test123'); 
+         form.find('#signup_v1-password-confirm').val('test123'); 
+         form.find('#signup_v1-email').val('test@test.test'); 
+        form.find('#signup_v1-email-confirm').val('test@test.test'); 
+  
+     }); 
+
 </script> 
 </body>
  </html>
