@@ -1,18 +1,199 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
+    <title>Register</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="starter-template.css" rel="stylesheet">
     <link rel="stylesheet" href="jquery.validation.css">
 
+
+
+</head>
+<body>
+
+   		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+    			<!-- Brand and toggle get grouped for better mobile display -->
+    			<div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      					<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			<a class="navbar-brand " href="#">
+        				Company Name
+        			</a>
+    			</div>
+    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      				<ul class="nav navbar-nav">
+        				<li class="active"><a href="login.html">Home <span class="sr-only">(current)</span></a></li>
+        			</ul>
+        			<ul class="nav navbar-nav navbar-right">
+        				<li><a href="login.html"><u>Login</u></a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </nav>
+		<div class="container">
+			<div class="jumbotron">
+	    		<h1 align="center"> User Registration </h1>
+	  		</div>
+	  	</div>
+	  	<div class="container-fluid">
+			<div class="row">
+ 
+		<form  id="form-signup_v1"
+			  name="form-signup_v1"
+			  method="POST"
+			  class="validation-form-container" >
+
+			    
+			  <div class="field">
+				<label for="signup_v1-username">First Name</label>
+				<div class="ui center labeled input">
+
+					<input id="signup_v1-firstname"
+						   name="signup_v1[firstname]"
+						   type="text"
+						    data-validation="[L>=2]"
+						   data-validation-message="$ must be at least 2 characters">
+
+					<div class="ui corner label">
+						<i class="asterisk icon">*</i>
+					</div>
+				</div>
+			</div>
+			  
+			  
+			  
+			  
+			  
+			  <div class="field">
+				<label for="signup_v1-username">Last Name</label>
+				<div class="ui center labeled input">
+
+					<input id="signup_v1-lastname"
+						   name="signup_v1[lastname]"
+						   type="text"
+						   
+						  data-validation="[L>=2]"
+						   data-validation-message="$ must be at least 2 characters">
+
+					<div class="ui corner label">
+						<i class="asterisk icon">*</i>
+					</div>
+				</div>
+			</div>
+			  
+			  
+			  
+			  
+			  
+			<div class="field">
+				<label for="signup_v1-username">Username</label>
+				<div class="ui center labeled input">
+
+					<input id="signup_v1-username"
+						   name="signup_v1[username]"
+						   type="text"
+						   data-validation="[L>=6, L<=18, MIXED]"
+						   data-validation-message="$ must be between 6 and 18 characters. No special characters allowed."
+						   data-validation-regex="/admin/i"
+						   data-validation-regex-message="The word &quot;Admin&quot; is not allowed in the $" >
+
+					<div class="ui corner label">
+						<i class="asterisk icon">*</i>
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<label for="signup_v1-password">Password</label>
+				<div class="ui left labeled input">
+
+					<input id="signup_v1-password"
+						   name="signup_v1[password]"
+						   type="password" data-validation="[L>=6]"
+						   data-validation-message="$ must be at least 6 characters">
+
+					<div class="ui corner label">
+						<i class="asterisk icon">*</i>
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<label for="signup_v1-password-confirm">Confirm Password</label>
+				<div class="ui left labeled input">
+
+					<input id="signup_v1-password-confirm"
+						   name="signup_v1[password-confirm]"
+						   type="password"
+						   data-validation="[V==signup_v1[password]]"
+						   data-validation-message="$ does not match the password">
+
+					<div class="ui corner label">
+						<i class="asterisk icon">*</i>
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<label for="signup_v1-email">Email</label>
+				<div class="ui left labeled input">
+
+					<input id="signup_v1-email"
+						   name="signup_v1[email]"
+						   type="text"
+						   data-validation="[EMAIL]">
+
+					<div class="ui corner label">
+						<i class="asterisk icon">*</i>
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<label for="signup_v1-email-confirm">Confirm Email</label>
+				<div class="ui left labeled input">
+
+					<input id="signup_v1-email-confirm"
+						   name="signup_v1[email-confirm]"
+						   type="text"
+						   data-validation="[V==signup_v1[email]]"
+						   data-validation-message="$ does not match the email">
+
+					<div class="ui corner label">
+						<i class="asterisk icon">*</i>
+					</div>
+				</div>
+			</div>
+ <p class="text-center">
+			<input type="submit" class="ui blue submit button" value="Sign up!">
+
+			<button id="prefill-signup_v1" type="button" class="ui mini basic button">
+				Prefill
+			</button>
+           <p class="text-center">Already a member ?<a href="login.html" > Go and log in</a></p>
+					<input type="hidden" name="honeypot" value="IS-421-RRZ" />
+
+		</form>
+	</div>
+	</div>
+</div>
+
+
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/additional-methods.js"></script>
-    <script>
+    <script src="js/jquery.validation.js"></script>
+	<script src="http://w3resource.com/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js"></script>
+    <script src="http://w3resource.com/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js"></script>
+
+<script>
 
     $('#form-signup_v1').validate({
         submit: {
@@ -50,7 +231,8 @@
 
         var form = $(this).closest('form');
 
-        form.find('#signup_v1-name').val('John Doe');
+        form.find('#signup_v1-firstname').val('John');
+		form.find('#signup_v1-lastname').val('Doe');
         form.find('#signup_v1-username').val('RocketJoe');
         form.find('#signup_v1-password').val('test123');
         form.find('#signup_v1-password-confirm').val('test123');
@@ -59,105 +241,10 @@
 
     });
 
+
+
+ 
 </script>
-
-</head>
-<body>
-
-<h1>Signup_v1 Demo</h1>
-
-
-
-<form id="form-signup_v1"
-      name="form-signup_v1"
-      method="POST"
-      class="validation-form-container">
-
-    <div class="field">
-        <label for="signup_v1-username">Username</label>
-        <div class="ui left labeled input">
-
-            <input id="signup_v1-username"
-                   name="signup_v1[username]"
-                   type="text"
-                   data-validation="[L>=6, L<=18, MIXED]"
-                   data-validation-message="$ must be between 6 and 18 characters. No special characters allowed."
-                   data-validation-regex="/admin/i"
-                   data-validation-regex-message="The word &quot;Admin&quot; is not allowed in the $" >
-
-            <div class="ui corner label">
-                <i class="asterisk icon">*</i>
-            </div>
-        </div>
-    </div>
-    <div class="field">
-        <label for="signup_v1-password">Password</label>
-        <div class="ui left labeled input">
-
-            <input id="signup_v1-password"
-                   name="signup_v1[password]"
-                   type="password" data-validation="[L>=6]"
-                   data-validation-message="$ must be at least 6 characters">
-
-            <div class="ui corner label">
-                <i class="asterisk icon">*</i>
-            </div>
-        </div>
-    </div>
-    <div class="field">
-        <label for="signup_v1-password-confirm">Confirm Password</label>
-        <div class="ui left labeled input">
-
-            <input id="signup_v1-password-confirm"
-                   name="signup_v1[password-confirm]"
-                   type="password"
-                   data-validation="[V==signup_v1[password]]"
-                   data-validation-message="$ does not match the password">
-
-            <div class="ui corner label">
-                <i class="asterisk icon">*</i>
-            </div>
-        </div>
-    </div>
-    <div class="field">
-        <label for="signup_v1-email">Email</label>
-        <div class="ui left labeled input">
-
-            <input id="signup_v1-email"
-                   name="signup_v1[email]"
-                   type="text"
-                   data-validation="[EMAIL]">
-
-            <div class="ui corner label">
-                <i class="asterisk icon">*</i>
-            </div>
-        </div>
-    </div>
-    <div class="field">
-        <label for="signup_v1-email-confirm">Confirm Email</label>
-        <div class="ui left labeled input">
-
-            <input id="signup_v1-email-confirm"
-                   name="signup_v1[email-confirm]"
-                   type="text"
-                   data-validation="[V==signup_v1[email]]"
-                   data-validation-message="$ does not match the email">
-
-            <div class="ui corner label">
-                <i class="asterisk icon">*</i>
-            </div>
-        </div>
-    </div>
-
-    <input type="submit" class="ui blue submit button" value="Sign up!">
-
-    <button id="prefill-signup_v1" type="button" class="ui mini basic button">
-        Prefill
-    </button>
-
-</form>
-
-
 
 </body>
 </html>
