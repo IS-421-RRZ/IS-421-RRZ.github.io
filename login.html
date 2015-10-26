@@ -1,38 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Login</title>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<link href="public/css/template.css" rel="stylesheet">
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
- 
-        function checkForm(form) {
- 
-            // checks to make sure no fields are empty
-            if (form.username.value == "" || form.passwordfield.value == "") {
-                alert("Error: One of the fields is empty! Do not leave any fields empty!");
-                return false;
-            }
- 
-			
-           if (form.username.value.length > 8){
-			alert("The field cannot contain more than 8 characters!")
-			return false;
-			}
-            // all tests passed, submit form
-            return alert('successful submit');
-        }
- 
-    </script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Log In</title>
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/starter-template.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/jquery.validation.css">
+
+
 
 </head>
 <body>
 
-<nav class="navbar navbar-default">
+   		<nav class="navbar navbar-default">
 			<div class="container-fluid">
     			<!-- Brand and toggle get grouped for better mobile display -->
     			<div class="navbar-header">
@@ -48,55 +35,60 @@
     			</div>
     			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       				<ul class="nav navbar-nav">
-        				<li class="active"><a href="login.html">Home<span class="sr-only">(current)</span></a></li>
+        				<li class="active"><a href="login.html">Home <span class="sr-only">(current)</span></a></li>
         			</ul>
         			<ul class="nav navbar-nav navbar-right">
-        				<li><a href="register.html"><u>Sign Up</u></a></li>
+        				<li><a href="login.html"><u>Login</u></a></li>
         			</ul>
         		</div>
         	</div>
         </nav>
 		<div class="container">
 			<div class="jumbotron">
-	    		<h1 align="center"> User Log In </h1>
+	    		<h1 align="center"> Sign In </h1>
 	  		</div>
 	  	</div>
-
-	<a class="hiddenanchor" id="tologin"></a>
-	<div id="wrapper">
-		<div id="login" class="animate form" align="center">
-			<form   action="homePage.html" autocomplete="on" role="form"  onsubmit="return checkForm(this);"> 
-<br>
-<br>
-			
-				<p> 
-					<font color="black"><label for="username" class="uname" data-icon="u" > Username </label>
-					<input id="username" name="username" type="text" />
-				</p>
-				<p> 
-					<font color="black"> <label for="password" class="youpasswd" data-icon="p">Password </label>&nbsp;
-					<input id="password"  name="passwordfield"  type="password"  /> <br>
-				
-				<p></p><br>	<input class="form-control" type="submit" value="Log In"/>
-				<br>
-
- <class="Sign Up button"/>
-				
-					<br>	<INPUT TYPE="button" value= "Sign Up" onClick="parent.location='register.html'">
-
-<p></p><br>
+	  	<div class="container-fluid">
+			<div class="row">
+ 
+		<form id="form-signin_v1" name="form-signin_v1" method="POST" align="center" col-md-4 col-md-offset-4">
+    <label>
+        Username
+        &nbsp;
+<input name="signin_v1[username]" type="text" data-validation="[NOTEMPTY]"  class="form-control">
+    </label><br>
+    <label>
+        Password
+        &nbsp;
+<input name="signin_v1[password]" type="password" data-validation="[NOTEMPTY]"  class="form-control">
+    </label><br>
+   <button type="submit" class="btn btn-primary btn-lg active">Login</button>
+ 
+	<p></p><br>
 <p class="Forgot Username button"> 
 				 <a href="usernameRetrieval.html">Forgot Username
 
 <p class="Forgot Password button"> 
 					
  <a href="passwordRetrieval.html">Forgot Password
-				
-			</form>
-			</div>
-</div>	
-	</div>
-		
-</body>
 
+</form>
+	</div>
+	</div>
+</div>
+
+
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="public/js/jquery.validation.js"></script>
+	<script src="http://w3resource.com/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js"></script>
+    <script src="http://w3resource.com/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js"></script>
+
+<script>
+
+   $('#form-signin_v1').validate();
+
+ 
+</script>
+
+</body>
 </html>
