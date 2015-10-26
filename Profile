@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Edit Your Profile</title>
+	    <meta charset="utf-8">
+	    <meta content="width=device-width, initial-scale=1" name="viewport">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="public/css/template.css" rel="stylesheet">
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	    <script src="public/js/validate.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+    			<!-- Brand and toggle get grouped for better mobile display -->
+    			<div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      					<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			<a class="navbar-brand " href="#">
+        				<img id="brand-image" class="img-circle" src="public/img/icon.png"/>
+        			</a>
+    			</div>
+    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      				<ul class="nav navbar-nav">
+        				<li><a href="homePage.html">Home</a></li>
+        				<li class="active"><a href="editProfile.html">Edit Profile <span class="sr-only">(current)</span></a></li>
+        			</ul>
+        			<ul class="nav navbar-nav navbar-right">
+        				<li><a href="login.html"><u>Logout</u></a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </nav>
+        <section>
+        	<div class="container-fluid">
+	        	<div class="jumbotron">
+	        		<div class="row">
+		        		<div class="col-md-6">
+		        			<div class="row">
+			        			<div class="col-md-6">
+				        			<form action="" enctype="multipart/form-data" autocomplete="on" role="form">
+				        				<div class="form-group form-group-">
+				        					<label class="control-label" for="imageprofile">Profile Picture:</label>
+				        					<a href="#" class="thumbnail">
+										      <img class="img-responsive" src="public/img/icon.png" alt="">
+										    </a>
+											<input id="imageprofile" name="image" type="file" accept="image/*" />
+											<div class="col-md-4">
+												<input class="form-control" type="submit" name="profilePic" value="Save"/>
+											</div>
+				        				</div>
+				        			</form>
+				        		</div>
+				        	</div>
+				        	<div class="row" id="aboutMe">
+				        		<div class="col-md-6">
+				        			<form action="" autocomplete="on" role="form">
+						        		<div class="form-group">
+						        			<label class="control-label" for="aboutMeprofile">About Me:</label>
+						        			<textarea class="form-control" rows="7" id="aboutMeprofile" name="aboutMe"></textarea>
+						        			<div class="col-md-4">
+						        				<input class="form-control" type="submit" name="saveAboutMe" value="Save">
+						        			</div>
+						        		</div>
+		        					</form>
+				        		</div>
+		        			</div>
+		        		</div>	
+		        		<div class="col-md-4 col-md-offset-1">
+		      
+						</div>
+					</div>
+	        	</div>
+	        </div>
+        </section>
+		
+	</body>
+
+</html>
