@@ -54,22 +54,21 @@
   <form id="form-signup_v1" name="form-signup_v1" method="POST" class="validation-form-container col-md-4 col-md-offset-4" align="center" > 
 </br>
 <div class="field">
-				<label for="signup_v1-email">Email</label>
-				<div class="ui left labeled input">
-
-					<input id="signup_v1-email"
-						   name="signup_v1[email]"
-						   type="text"
-						   data-validation="[EMAIL]">
-
+			<label>
+        Password
+        &nbsp;
+<input name="signin_v1[password]" type="password" data-validation="[NOTEMPTY]"  class="form-control">
+    </label
 					<div class="ui corner label">
+						<i class="asterisk icon">*</i><br>
+						<button type="submit" class="btn btn-primary btn-lg active">Submit</button>
 						<i class="asterisk icon">*</i>
 						
 						
 					</div>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-primary btn-lg active">Submit</button>
+		
   </form>
   </div>
 
