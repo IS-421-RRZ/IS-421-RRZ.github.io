@@ -51,10 +51,9 @@
 				        					<a href="#" class="thumbnail">
 										      <img class="img-responsive" src="public/img/icon.png" alt="">
 										    </a>
-											<input id="imageprofile" name="image" type="file" accept="image/*" />
-											<div class="col-md-4">
-												<input class="form-control" type="submit" name="profilePic" value="Save"/>
-											</div>
+										
+										
+										
 				        				</div>
 				        			</form>
 				        		</div>
