@@ -63,7 +63,7 @@
   
 			    
 			  <div class="field">
-				<label for="signup_v1-username">First Name</label>
+				<label for="signup_v1-firstname">First Name</label>
 				<div class="ui center labeled input">
 
 					<input id="signup_v1-firstname"
@@ -84,7 +84,7 @@
 			  
 			  
 			  <div class="field">
-				<label for="signup_v1-username">Last Name</label>
+				<label for="signup_v1-lastname">Last Name</label>
 				<div class="ui center labeled input">
 
 					<input id="signup_v1-lastname"
@@ -101,29 +101,27 @@
 				</div>
 			</div>
 			  
-			  
-			  
-			  
-			  
-			<div class="field">
-				<label for="signup_v1-username">Username</label>
+			    <div class="field">
+				<label for="signup_v1-username">UserName</label>
 				<div class="ui center labeled input">
 
 					<input id="signup_v1-username"
 						   name="signup_v1[username]"
 						   type="text"
 						   class="form-control"
-						   data-validation="[L>=6, L<=18, MIXED]"
-						   data-validation-message="$ must be between 6 and 18 characters. No special characters allowed."
+						   data-validation="[L>=2]"
+						   data-validation-message="$ must be at least 2 characters">
 						 
-						 
+
 					<div class="ui corner label">
 						<i class="asterisk icon">*</i>
 					</div>
 				</div>
 			</div>
-			
-			<div class="field">
+			  
+			  
+			  
+			  	<div class="field">
 				<label for="signup_v1-password">Password</label>
 				<div class="ui center labeled input">
 
@@ -187,6 +185,11 @@
 				</div>
 			</div>
 	  
+		
+			  
+			  
+		
+			
 		
 			
 			
