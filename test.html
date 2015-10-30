@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    <title>Register</title>
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/starter-template.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/jquery.validation.css">
+
+
+
+</head>
+<body>
+
+   		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+    			<!-- Brand and toggle get grouped for better mobile display -->
+    			<div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      					<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			<a class="navbar-brand " href="#">
+        				Company Name
+        			</a>
+    			</div>
+    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      				<ul class="nav navbar-nav">
+        				<li class="active"><a href="login.html">Home <span class="sr-only">(current)</span></a></li>
+        			</ul>
+        			<ul class="nav navbar-nav navbar-right">
+        				<li><a href="login.html"><u>Login</u></a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </nav>
+		<div class="container">
+			<div class="jumbotron">
+	    		<h1 align="center"> User Registration </h1>
+	  		</div>
+	  	</div>
+	  	
+ 
+ 
+ <div class="container-fluid">
+			<div class="row">
+ 
+
+
+
+ <div id="header"> 
+
+
+ <h1>Live Form Field Validation Using jQuery- Validate as you type</h1> 
+
+
+ </div> 
+
+
+  
+
+
+ <form action="#" method="post" id="myform"> 
+
+
+ 
+
+
+ <fieldset> 
+
+
+  <legend>Contact Form </legend> 
+
+
+  
+
+
+ <p>We would love to hear from you. Please fill out this form</p> 
+
+
+  <div class="elements"> 
+
+
+  <label for="name">Name :</label> 
+
+
+  <input type="text" id="fname" name="fname" size="35" /> 
+
+
+  </div> 
+
+
+  <div class="elements"> 
+
+
+  <label for="name">Email :</label> 
+
+
+  <input type="text" id="email" name="e-mail" size="35" /> 
+
+
+  </div> 
+
+
+ <div class="elements"> 
+
+
+  <label for="message">Message</label> 
+
+
+ <textarea rows="5" <span class="IL_AD" id="IL_AD8">cols</span>="28" id="msg" name="msg" /></textarea> 
+
+
+  </div> 
+
+
+ <div class="submit"> 
+
+
+ <input type="submit" id="submit" class="btn" value="Login" /> 
+
+
+  </div> 
+
+
+  </fieldset> 
+
+
+ </form> 
+
+
+ <p style="text-align: justify;"> 
+
+	
+	</div>
+	</div>
+
+
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="public/js/jquery.validation.js"></script>
+	<script src="http://w3resource.com/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js"></script>
+    <script src="http://w3resource.com/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js"></script>
+
+<script>
+
+ 
+$(<span class="IL_AD" id="IL_AD3">document</span>).ready(function(){ 
+
+
+$('#message').<span class="IL_AD" id="IL_AD2">hide</span>(); 
+
+
+  
+
+
+ $('#myform input[type=text], #myform textarea').each(function(){ 
+
+
+  $(this).after('<span class="validation"></span>'); 
+
+
+ }); 
+
+
+ 
+
+
+   
+
+
+  $('#fname').focusout(function() { 
+
+
+  if (!$(this).val()) 
+
+
+  $(this).parent().find('span').removeClass('valid').addClass('error').focus(); 
+
+
+  
+
+
+  else 
+
+
+  $(this).parent().find('span').removeClass('error').addClass('valid'); 
+
+
+  }); 
+
+
+  
+
+
+  $('#email').focusout(function() { 
+
+
+  if (!$(this).val() || !isEmail($(this).val())) 
+
+
+  $(this).parent().find('span').removeClass('valid').addClass('error').focus(); 
+
+
+  else 
+
+
+  $(this).parent().find('span').removeClass('error').addClass('valid'); 
+
+
+  }); 
+
+
+ 
+
+
+  $('#msg').focusout(function() { 
+
+
+  if (!$(this).val() ) 
+
+
+  $(this).parent().find('span').removeClass('valid').addClass('error').focus(); 
+
+
+  else 
+
+
+  $(this).parent().find('span').removeClass('error').addClass('valid'); 
+
+
+  }); 
+
+
+   
+
+
+  
+
+
+   
+
+
+  $('#submit').click(function() { 
+
+
+   
+
+
+  $('#fname').trigger("focusout"); 
+
+
+  
+
+
+  $('#email').trigger("focusout"); 
+
+
+  $('#msg').trigger("focusout"); 
+
+
+   
+
+
+  if ($('#myform span.error').size()>0) { 
+
+
+   
+
+
+  $('span.error:first').parent().find('input, textarea').focus(); 
+
+
+  
+
+
+ return false; 
+
+
+  } 
+
+
+  else{ 
+
+
+  alert ("Thanks All fields Were Entered Correctly");} 
+
+
+  }); 
+
+
+  
+
+
+  function isEmail(emailid) { 
+
+
+  
+
+
+ var <span class="IL_AD" id="IL_AD1">pattern</span> = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i); 
+
+
+   
+
+
+ return pattern.test(emailid); 
+
+
+ } 
+
+
+   
+
+
+ }); 
+
+
+
+
+
+ 
+</script>
+
+</body>
+</html>
